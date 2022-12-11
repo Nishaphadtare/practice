@@ -1,0 +1,33 @@
+<div [ngStyle]="{'color': colorVal, 'background-color': '#ddd'}">
+    learning anuglar 8
+</div>
+
+<h4> Ng Class</h4>
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
+    }">
+ 
+     {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
+<p> Normal para</p>
+<p appCustdir> custom para </p>
+
+
+<div style="margin: left 300px; ;"> 
+    <input type="text"  #uusernsme (keyup.enter)="show(uusernsme.value)">
+</div>
+<br>
+<button (click)="show(uusernsme.value)">show </button>
+<div>
+    {{uname}}
+</div>
+
+
+<!-- <div> custom para div</div> -->
+

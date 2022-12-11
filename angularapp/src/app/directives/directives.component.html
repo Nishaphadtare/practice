@@ -1,0 +1,14 @@
+
+<div class="box">
+    <h1 appCusdirassin> Custom Directives</h1>
+    <hr>
+    <h3>  Employee Name is: <input type="text" [(ngModel)]="name"> </h3> 
+    <h3 appCusdirassin> Employee Name is : <label>{{name}}</label> </h3>  
+    <br>
+    <h3> password is: <input type="text" [(ngModel)]="password"> </h3> 
+    <h3 appCusdirassin> Password : <label>{{password}}</label></h3>
+  
+    <button type="button" class="btn btn-submit" [disabled]="!name" (click)="onSubmit()" id="a">Submit</button>
+ 
+    <button [disabled]="!name"  (click)="onRset()" > Reset </button>
+</div>

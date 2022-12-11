@@ -1,0 +1,37 @@
+
+<div class="container" id="box">
+    <h3> Assignment on Add and remove content in table on click button event</h3>
+    <div class="row">
+        <div class="col-sm-6 mt-3">
+            <input type="text" #input [(ngModel)]="name" placeholder="Enter name">
+
+            <button class="btn btn-primary" (click)="add(input.value)" (click)="onToggleDetails()"> Add
+                Students</button>
+            <hr>
+            <div class="container">
+                <table class="table table-borderd">
+                    <thead>
+                        <tr>
+                            <th> name </th>
+                            <th> Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                             <!-- <div [ngStyle]="{backgroundColor= item >= 3 ? 'blue': 'transparent'}">  -->
+                        <tr *ngFor="let item of data; let i=index">
+                            <td> {{item.name}} </td>
+
+                            <td> <button class="btn btn-success" (click)="remove(i)"> Remove </button></td>
+                        </tr>
+                   
+
+                    </tbody>
+
+                </table>
+
+            </div>
+         
+
+        </div>
+    </div>

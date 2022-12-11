@@ -1,0 +1,45 @@
+.box{
+    height: 400px;
+    width: 1000px;
+    padding: 3px;
+    background-color: rgb(189, 239, 239);
+    color: brown;
+    /* position: absolute;
+    top: 250;
+    left: 220; */
+    border-radius: 10px;
+    /* border-radius: 3px solid rgb(154, 40, 59);  */
+    /* border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px; */
+    margin-top: 9px;
+    margin-left: 500px;
+}
+
+#box1{
+    height: 200px;
+    width: 1000px;
+    padding: 3px;
+    background-color: pink;
+    
+    /* position: absolute;
+    top: 150;
+    left: 1200; */
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 500px;
+
+    
+}
+.a{
+    background-color: gray;
+    color: white
+}
+
+.table{
+    height: 20px;
+    color: black;
+}
+
+h2{
+    box-sizing: border-box;
+}

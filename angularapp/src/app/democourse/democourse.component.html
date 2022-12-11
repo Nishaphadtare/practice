@@ -1,0 +1,38 @@
+<div *ngIf="isShow" id="box1">
+    <h3> Structural Directives Assignment </h3>
+    <h2 style="background-color: gray; color: white;" class="box1"> 1.*ngFor Example</h2>
+    <p><input type="checkbox" checked="true"> click here </p>
+    <p> This is a *ngIf directives. the *ngIf directives are Add and Remove the DOM elements. We can hide or show the elements based on condition </p>
+    <hr>
+</div>
+
+
+<div class="box">
+    <hr>
+    <div>
+    <h3 class="a"> 2. *ngFor</h3>
+    <hr>
+    {{title}}
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th> CourseName</th>
+                <th> CourseFees</th>
+                <th> CourseDuration</th>
+                <th> CourseType</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let Courses of courses">
+                <td>{{Courses.courseName}}</td>
+                <td>{{Courses.courseFees}}</td>
+                <td>{{Courses.courseDuration}}</td>
+                <td>{{Courses.courseType}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

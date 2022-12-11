@@ -1,0 +1,15 @@
+ul{
+    text-align: justify;
+    background-color: aqua;
+}
+
+.box{
+    width: 600px;
+    height: 300px;
+    margin-left: 300px;
+    padding-top: 400px;
+}
+h2{
+    background-color: black;
+    color: white;
+}

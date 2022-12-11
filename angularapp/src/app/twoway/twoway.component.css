@@ -1,0 +1,19 @@
+.box{
+    height: 200px;
+    width: 300px;
+    background-color: blueviolet;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+   
+}
+
+#text{
+padding: 30px;
+text-size-adjust: 30px;
+ margin-left: 10px;
+ position: relative;
+}
+
+#a{
+    background-color: gray;
+}

@@ -1,0 +1,21 @@
+#box {
+    height: 200px;
+    width: 1000px;
+    background-color: pink;
+    border-radius: 10px;
+    position: absolute;
+    top: 520;
+    left: 220;
+    border-radius: 10px;
+    /* border-bottom-left-radius: 30px;
+    border-top-right-radius:30px ; */
+    padding: 3px;
+    margin-top: 9px;
+    margin-left: 500px;
+    
+}
+h3{
+    background-color: gray;
+    color: white;
+}
+

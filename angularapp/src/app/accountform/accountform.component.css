@@ -1,0 +1,21 @@
+h3{
+    color: white;
+    background-color: black;
+}
+
+label{
+    margin-top: 20px;
+    gap: 10px;
+    margin-left: 30px;
+
+}
+table{
+    text-align: center;
+}
+/*. id{
+    ma
+} */
+/* container{
+    margin-top: 10px;
+    gap: 10px;
+} */

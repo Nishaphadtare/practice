@@ -1,0 +1,24 @@
+<div class="container" id="box">
+    <h3> 3. *ngSwitch </h3>
+    <hr>
+    <div class="row">
+        <div class="cal-md-4">
+            <select name="form-control" (change)="getCourseValue($event)">
+                <option value="Default">Select Courses</option>
+                <option value="Html">Html</option>
+                <option value="CSS">CSS</option>
+                <option value="Java">Java</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Angular8">Angular8</option>
+            </select>
+        </div>
+        <div class="cla-md-12" [ngSwitch]="selectCourses" >
+            <h2 class="text-success" *ngSwitchDefault>Select Default Courses</h2>
+            <h2 class="text-success" *ngSwitchCase="'Html'">Java</h2>
+            <h2 class="text-success" *ngSwitchCase="'CSS'">CSS</h2>
+            <h2 class="text-success" *ngSwitchCase="'Java'">Java</h2>
+            <h2 class="text-success" *ngSwitchCase="'JavaScript'">JavaScript</h2>
+            <h2 class="text-success" *ngSwitchCase="'Angular8'">Angular8</h2>
+        </div>
+    </div>
+</div>

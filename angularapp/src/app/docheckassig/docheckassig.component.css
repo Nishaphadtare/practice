@@ -1,0 +1,20 @@
+h3{
+   text-align: center;
+   margin-bottom: 40px;
+   background-color: black;
+   color: white;
+}
+/* .container{
+    margin-top: 300px;
+} */
+input{
+    margin-bottom: 30px;
+   width: 700px;
+}
+#box{
+    width: 1000px;
+    height: 900px;
+    margin-top: 300px;
+    border: 10px;
+   
+}

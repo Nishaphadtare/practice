@@ -1,0 +1,11 @@
+<div class="box">
+    <ul id="text">
+        <li> User Name is: <input type="text" [(ngModel)]="UserName"></li>
+        <br>
+        <li> User name is : <label> {{UserName}} </label></li>
+        <br>
+        <li> <button [disabled]="!UserName" (click)="onReset()" id="a"> Reset </button></li>
+    </ul>
+    
+
+</div>
