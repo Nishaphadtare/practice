@@ -7,30 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ServersComponent  {
+name: string = 'CodemindTechnology'
+serversId : number = 36;
+serverStatus : string = 'Offline';
+allowNewServer = false;
+serverCreationStatus : string = 'server is not created';
 
-  name: string = 'CodmindTechnology';
-  serverId : number = 37;
-  serverStatus: string = 'Offline';
-  allowNewServer = false;
-  imgUrl = `https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png?20221110153201`;
 
-  serverCreationStatus : string = 'Server is not created';
-
-  serverName: string = 'codemind.com';
-  constructor() { 
-
-   setTimeout(()=> {
-    this.allowNewServer = true
-  }, 5000);
-  }
-  
+serverName: string = 'Codemind.com';
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+     }, 5000);
+   }
 
   getServerStatus() {
-    return this.serverStatus;
-  }
+     return this.serverStatus;
+    }
 
-  onCreateServer(){
-   this.serverCreationStatus = 'server Created';
-  }
+    onCreationServer() {
+      this.serverCreationStatus = 'server is Created'
+    }
+  
 }
 

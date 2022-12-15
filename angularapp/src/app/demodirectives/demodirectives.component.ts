@@ -8,15 +8,13 @@ import { Movie } from '../models/movies';
 })
 export class DemodirectivesComponent implements OnInit {
 
-  isShow: boolean = true;
-  title : string ="Top 3 Movies";
-  movies: Movie [] = [
-    {title: '3 Idiots', director: 'Rajkumar', cast: 'Amir', releaseDate: '2007'},
-    {title: 'Kantara', director: 'Rishab', cast: 'Rishab', releaseDate: '2002'},
-    {title: 'KGF', director: 'RockyBhai', cast:'Yesh', releaseDate: '2009'}
-
+  isShow : boolean = true;
+  title: string = 'top 3 Movies';
+  movies: Movie[] = [
+    {title: '3 Ideots', director: 'Rajkumar', cast: 'Amir Khan', releaseDate: '2007'},
+    {title: 'Kantara', director: 'Rishab', cast: 'Rishab', releaseDate: '2022'},
+    {title: 'KGF', director: 'RockyBhai', cast: 'Yash', releaseDate: '2019'}
   ]
-  
   constructor() { }
 
   ngOnInit() {

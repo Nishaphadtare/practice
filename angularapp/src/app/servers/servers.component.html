@@ -1,20 +1,16 @@
+<label>{{name}}</label>
 
-<label> {{name}} </label> 
-
-<p> Server with id {{serverId}} is {{getServerStatus()}} </p>
-
-<button [disabled]="!allowNewServer" (click)="onCreateServer()" class="btn btn-primary"> Add server </button>
-
-
- <div>{{serverCreationStatus}} </div>
-
-<!-- <img [src]="imgUrl"> -->
+<p>server with id {{serversId}} is {{getServerStatus()}}</p>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreationServer()">Add Server</button>
+<hr>
+<div> {{serverCreationStatus}} </div>
 
 <div>
-    Two way data binding example;
+    Two way data binding Example :
 </div>
 
 <div>
-    <input type ="text" [(ngModel)]="serverName">
+    <input type="text" [(ngModel)]="serverName">
 </div>
 {{serverName}}
+

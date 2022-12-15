@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgswitchComponent implements OnInit {
 
-  selectedProduct:string;
-
+  selectedProduct: string;
   constructor() { }
 
   ngOnInit() {
   }
-  getProductValue(value) {
+  getProductValue(value){
     console.log(value.target.value);
-    this.selectedProduct =value.target.value;
+    this.selectedProduct = value.target.value;
   }
+
 }
