@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AttriComponent implements OnInit {
 
 colorVal = 'blue';
-
+uname : string;
 people : any []= [
   {
     "name": 'Vicky',
@@ -32,6 +32,12 @@ people : any []= [
   constructor() { }
 
   ngOnInit() {
+  }
+
+  show(value){
+    
+    this.uname = value;
+    
   }
 
 }
