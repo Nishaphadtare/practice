@@ -5,12 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
-import { FormsComponent } from './forms/forms.component';
-import { SimpleformComponent } from './simpleform/simpleform.component';
+import { SuccessComponent } from './success/success.component';
+import { WarningComponent } from './warning/warning.component';
 import { FormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
-// import { ServeComponent } from './serve/serve.component';
+import { AttriComponent } from './attri/attri.component';
+import { CustdirDirective } from './custdir.directive';
+
+
+
+
 
 
 @NgModule({
@@ -18,18 +23,21 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
     AppComponent,
     ServerComponent,
     ServersComponent,
-    FormsComponent,
-    SimpleformComponent,
+    SuccessComponent,
+    WarningComponent,
     DemodirectivesComponent,
     NgswitchComponent,
-    // ServeComponent,
-  
+    AttriComponent,
+    CustdirDirective
     
   ],
+    
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

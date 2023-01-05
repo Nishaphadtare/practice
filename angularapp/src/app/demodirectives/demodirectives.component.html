@@ -1,28 +1,27 @@
 <p *ngIf="!isShow">demodirectives works!</p>
 
-<div>
-    <div>
-        {{title}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>ReleaseDate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies; let i =index;">
+                        <td>{{i+1}}</td>
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
-
-<div>
-    <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Director</th>
-                <th>Cast</th>
-                <th>ReleaseDate</th>
-            </tr>
-        </thead>
-            <tbody>
-                <tr *ngFor="let movie of movies">
-                    <td>{{movie.title}}</td>
-                    <td>{{movie.director}}</td>
-                    <td>{{movie.cast}}</td>
-                    <td>{{movie.releaseDate}}</td>
-                </tr>
-            </tbody>
-    </table>
 </div>

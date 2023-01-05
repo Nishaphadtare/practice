@@ -2,32 +2,33 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-servers',
-  templateUrl: './servers.component.html',
+  templateUrl: `./servers.component.html`,
   styleUrls: ['./servers.component.css']
 })
-
-export class ServersComponent  {
-name: string = 'CodemindTechnology'
-serversId : number = 36;
-serverStatus : string = 'Offline';
-allowNewServer = false;
-serverCreationStatus : string = 'server is not created';
-
-
-serverName: string = 'Codemind.com';
-  constructor() {
-    setTimeout(() => {
-      this.allowNewServer = true;
-     }, 5000);
-   }
-
-  getServerStatus() {
-     return this.serverStatus;
-    }
-
-    onCreationServer() {
-      this.serverCreationStatus = 'server is Created'
-    }
+export class ServersComponent implements OnInit {
+  name: string = 'CodemindTechnology';
+  serverId: number = 37;
+  serverStatus: string = 'Online';
+  allowedNewServer = false;
   
-}
+  ServerCreationStatus = 'serve not created';
+  serverName : string = 'Codemind'
 
+  constructor(){
+    setTimeout(()=> {
+      this.allowedNewServer  = true;
+    }, 5000)
+  }
+
+  
+  ngOnInit() {
+  
+  }
+
+getServerStatus(){
+  return this.serverStatus;
+}
+  OnCreateSetver(){
+     this.ServerCreationStatus = 'Server Cerated'
+  }
+}

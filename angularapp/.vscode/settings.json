@@ -4,5 +4,8 @@
         "devkit",
         "jasminewd",
         "Studentform"
+    ],
+    "cSpell.ignoreWords": [
+        "codemind"
     ]
 }

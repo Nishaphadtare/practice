@@ -22,7 +22,7 @@
     "bootstrap": "^5.2.3",
     "eventemitter3": "^4.0.7",
     "follow-redirects": "^1.14.9",
-    "jquery": "^3.6.1",
+    "jquery": "^3.6.3",
     "node-releases": "^2.0.2",
     "p-limit": "^4.0.0",
     "popper": "^1.0.1",

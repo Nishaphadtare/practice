@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../models/movies';
 
+
+
 @Component({
   selector: 'app-demodirectives',
   templateUrl: './demodirectives.component.html',
@@ -8,13 +10,17 @@ import { Movie } from '../models/movies';
 })
 export class DemodirectivesComponent implements OnInit {
 
-  isShow : boolean = true;
-  title: string = 'top 3 Movies';
-  movies: Movie[] = [
-    {title: '3 Ideots', director: 'Rajkumar', cast: 'Amir Khan', releaseDate: '2007'},
-    {title: 'Kantara', director: 'Rishab', cast: 'Rishab', releaseDate: '2022'},
-    {title: 'KGF', director: 'RockyBhai', cast: 'Yash', releaseDate: '2019'}
+  isShow: boolean = false;
+  title : string = 'Top 3 movies';
+  movies : Movie [] = [
+    {title : 'KGF', director : 'RockyBhai', cast: 'Yash', releaseDate: '2019'},
+    {title : '3 Idiots', director : 'Rajkumar', cast: 'Amir', releaseDate: '2009'},
+    {title : 'Tiger 3', director : 'Maneesh Sharma', cast: 'Amir', releaseDate: '2023'}
+
   ]
+
+
+ 
   constructor() { }
 
   ngOnInit() {

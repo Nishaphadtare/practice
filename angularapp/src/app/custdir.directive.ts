@@ -5,13 +5,13 @@ import { Directive, ElementRef, Renderer2 } from '@angular/core';
 })
 export class CustdirDirective {
 
-  constructor(private el: ElementRef, private render: Renderer2) { 
-    console.log('Custom directives applied');
-
-        // el.nativeElement.style.backgroundColor = 'gray';
+  constructor(private el: ElementRef, private render: Renderer2) {
+    console.log('Custom directive applied');
+    
+    // el.nativeElement.style.backgroundColor = 'gray';
     // el.nativeElement.style.display = 'none';
-
-    render.setStyle(el.nativeElement, 'backgroundColor', 'yellow')
-  }
+render.setStyle(el.nativeElement, 'background-color', 'yellow')
+   }
 
 }
+

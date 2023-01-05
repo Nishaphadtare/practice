@@ -1,0 +1,17 @@
+<div [ngStyle]="{'color':colorVal, 'backgroundColor' : 'gray'}">
+    Hello I am Nisha, I am Learning angular 8
+</div>
+
+<h4>Ng Class</h4>
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success' : person.city === 'Solapur',
+        'text-danger' : person.city === 'Pune',
+        'text-primary' : person.city === 'Mumbai'
+        }">
+        {{person.name}} :-  ({{person.city}})
+    </li>
+</ul>
+
+<p>Normal para</p>
+<div appCustdir>Cuatom Para</div>
