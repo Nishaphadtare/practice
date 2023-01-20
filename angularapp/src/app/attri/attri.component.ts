@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Student } from '../models/student';
 
 @Component({
   selector: 'app-attri',
@@ -39,5 +40,4 @@ people : any []= [
     this.uname = value;
     
   }
-
 }

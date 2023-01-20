@@ -1,0 +1,60 @@
+<!-- <p>reactiveform-assign works!</p> -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+                <div formGroupName="employeeDetails">
+            <div class="form-group">
+                <label for="firstname">FirstName</label>
+                <input type="text" formControlName="firstname" class="form-control" id="firstname" placeholder="Enter first name">
+                <small class="text-danger" *ngIf="!myReactiveForm.get('employeeDetails.firstname').valid && myReactiveForm.get('employeeDetails.firstname').touched">
+                    <small *ngIf="myReactiveForm.get('employeeDetails.firstname').errors['required']">please enter UserName</small>
+                    <small *ngIf="myReactiveForm.get('employeeDetails.firstname').errors['notAllowedNames']">Codemind is not allowed {{myReactiveForm.get('employeeDetails.firstname').value}} </small>
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="lastname">LastName</label>
+                <input type="text" formControlName="lastname" class="form-control" id="lastname" placeholder="Enter Last name">
+                <small class="text-danger" *ngIf="!myReactiveForm.get('employeeDetails.lastname').valid && myReactiveForm.get('employeeDetails.lastname').touched">
+                    <small *ngIf="myReactiveForm.get('employeeDetails.lastname').errors['required']">Please Enter LastName</small>
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" formControlName="email" class="form-control" id="email" email placeholder="Enter email">
+                <small class="text-danger" *ngIf="!myReactiveForm.get('employeeDetails.email').valid && myReactiveForm.get('employeeDetails.email').touched">
+                    <small *ngIf="myReactiveForm.get('employeeDetails.email').errors['required']"></small>
+                    Invalid email please enter valid email
+                </small>
+            </div>
+        </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" formControlName="password" class="form-control" id="password" placeholder="Enter Password">
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="text" formControlName="mobile" class="form-control" id="mobile" placeholder="Enter Mobile Number">
+            </div>
+            <div class="form-group">
+                <div *ngFor="let gender of genders" class="custom-control cuatom-radio" >
+                    <input type="radio" class="custom-control-input" formControlName="gender" value="{{gender.value}}" id="{{gender.id}}">
+                    <label for="{{gender.id}}">{{gender.value}}</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select class="form-control" formControlName="country" id="country">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Japan">Japan</option>
+                    <option value="South-Korea">South-Korea</option>
+                    <option value="London">London</option>
+                </select>
+            </div>
+            <button class="btn btn-success mt-4" >Submit</button>
+        </form>
+        </div>
+    </div>
+</div>

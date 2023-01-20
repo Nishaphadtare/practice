@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
- <div style="text-align:center">
+ <!-- <div style="text-align:center"> -->
  <!-- <h1>
     Welcome to {{ title }}!
   </h1>  -->
@@ -15,12 +15,109 @@
  <app-success></app-success> -->
  <!-- <app-demodirectives></app-demodirectives> -->
  <!-- <app-ngswitch></app-ngswitch> -->
- <app-attri></app-attri>
  
 
+ <!-- <app-attri></app-attri> -->
 
-    
+ <!-- <app-demo [myInputMsg]="uname"></app-demo> -->
+ <!-- <div>
+  <app-demo (foodevent)="getDataFromChild($event)"></app-demo>
+</div>
+
+<ul *ngFor="let f of foods">
+  <li>
+    {{f}}
+  </li>
+ </ul>
+<br> -->
+
+<!-- <button (click)="show()">Click</button> -->
 
 
- 
-<router-outlet></router-outlet>
+<app-service1></app-service1>
+<!-- <app-service2></app-service2> -->
+
+<table class="table table-hover table-bordered table-dark">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Username</th>
+    <th>Address</th>
+    <th>Company</th>
+    <th>Website</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let data of userData">
+    <td>{{data.id}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.phone}}</td>
+    <td>{{data.username}}</td>
+    <td>{{data.email}}</td>
+    <td>{{data.address.city}}{{data.address.geo.lat}}{{data.address.geo.lng}}{{data.address.street}}{{data.address.suite}}{{data.address.zipcode}}</td>
+    <td>{{data.company.bs}}{{data.company.catchPhrase}}{{data.company.name}}</td>
+    <td>{{data.website}}</td>
+  </tr>
+</tbody>
+</table>
+
+<!-- <ul *ngFor="let s of student">
+  <li>{{s}}</li>
+</ul>
+<app-output-assignment (studentEvent)="getStudentData($event)"> </app-output-assignment>
+<div class="container mr-3 mt-3">
+<table class="table table-hover" >
+  <thead>
+    <tr>
+      <th>Roll No</th>     
+      <th>First Name</th>
+      <th>Last Name</th>    
+      <th>Course</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of newArrayOfStudent">
+      <td>{{s.rollNo}}</td>
+      <td>{{s.firstName}}</td>
+      <td>{{s.lastName}}</td>
+      <td>{{s.course}}</td>
+    </tr>
+  </tbody>
+</table>
+</div> -->
+
+
+<!-- <select (change)="uid= sid.value" #sid>
+  <option selected disabled>No value selected</option>
+  <option [value]="id" *ngFor="let id of [1,2,3,4]">
+    {{id}}
+  </option>
+</select> 
+
+<div>
+<div class="col-md-12">
+  <input type="text" placeholder="enter value" (blur)="handleData($event)">
+  <p>Product Name: <input type="text" placeholder="Enter Product name" [(ngModel)]="name"></p>
+  <p>Product Price: <input type="text" placeholder="Enter Product price" [(ngModel)]="price"></p>
+  <button class="btn btn-primary" (click)="updateProduct()">Update Product</button>
+  <app-hooks *ngIf="appchildExist" [userid]="uid" [parentData]="data" [product]="product">
+    <h2 #child>This is child content coming from parent component</h2>
+  </app-hooks>
+
+</div>
+</div>
+<button class="btn btn-danger" (click)="distroy()">Distroy Component</button> -->
+
+
+ <!-- <app-assigdirectives></app-assigdirectives> -->
+
+ <!-- <app-assiaddandremove></app-assiaddandremove> -->
+ <!-- <app-simple-template></app-simple-template> -->
+ <!-- <app-simple-driven-form></app-simple-driven-form> -->
+<!-- <app-reactive-form></app-reactive-form> -->
+<!-- <app-reactiveform-assign></app-reactiveform-assign> -->
+
+ <router-outlet></router-outlet>

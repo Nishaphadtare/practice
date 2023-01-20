@@ -1,0 +1,50 @@
+<!-- <p>simple-template works!</p> -->
+<div class="comtainer">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form (ngSubmit)="Onsubmit(myForm)" #myForm="ngForm">
+                <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+                    <div class="mb-3">
+                        <label for="username">UserName</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter UserName" [(ngModel)]="username" required>
+                        <small *ngIf="username">user name is : {{username}}</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" #email="ngModel" email name="email" placeholder="Enter Email" ngModel required>
+                        <small class="text-danger" *ngIf="!email.valid && email.touched ">Invalid email please enter valid email</small>
+                    </div>
+                    <small class="text-danger" *ngIf="!userDetails.valid && userDetails.touched">Please enter valid details</small>
+                </div>
+                <div class="form-group">
+                    <label for="course">Select Course</label>
+                    <select class="form-control" name="course" id="course" [ngModel]="defaultValue">
+                        <option value="html">Html</option>
+                        <option value="css">Css</option>
+                        <option value="Javascript">JavaScript</option>
+                        <option value="Typescript">TypeScript</option>
+                        <option value="Angular">Angular</option>
+                    </select>
+                </div>
+                    <div class="form-group">
+                        <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                            <input type="radio" name="gender" id="{{gender.id}}" value="{{gender.value}}" class="custom-input-radio" [(ngModel)]="defaultGender">
+                            <label for="{{gender.id}}" class="custom-control-radio">{{gender.value}}</label>
+                        </div>
+                    </div>
+               
+                <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Submit</button>
+
+                    <div class="row.justify-content-center mt-2" *ngIf="submitted">
+                        <div class="col-md-6 text-left rounded shadow py-5">
+                            <h2>Form Data</h2>
+                            <p>Username: <strong>{{employee.username}}</strong></p>
+                            <p>Email: <strong>{{employee.email}}</strong></p>
+                            <p>Course: <strong>{{employee.course}}</strong></p>
+                            <p>Gender: <strong>{{employee.gender}}</strong></p>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -17,6 +17,18 @@
 <div appCustdir>Cuatom Para</div>
 
 <div>
-<input type="text" #username (keyup.enter)="show(username.value)">
+<input type="text" #username>
 </div>
+<br>
+<button (click)="show(username.value)" >Show</button>
+<div>
 {{uname}}
+</div>
+
+<div>
+    <h3>Output Decorator</h3>
+    <input type="text" (click)="addStudentInfo(info.value)" #info>
+    <button class="btn btn-success" (click)="AddStudent(info.value)">Info</button>
+</div>
+
+
