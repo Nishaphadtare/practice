@@ -26,16 +26,17 @@ distroy(){
 userData : any = [];
 
 ngOnInit(): void {
+  //it is coming from the demo service  
   this._demoService.getUsersData().subscribe(data => {
-    console.log('getting data from api', data)
+    console.log('getting data from api', data);
     this.userData = data;
     console.log('getting data from api', data);
     
   })
-  // this._demoService.getDataPosts().subscribe(result=>{
-  //   console.log('getting posts',result);
-    
-  // })
+ this._demoService.getPostsData().subscribe(res => {
+console.log('posts', res);
+
+ })
 }
 
 uname = 'I am from app component';

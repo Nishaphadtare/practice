@@ -1,0 +1,47 @@
+<!-- <p>pipesdemo works!</p> -->
+
+<div>
+   <strong>Today's Date:</strong>  {{todaysDate}}
+</div>
+<br><br/>
+<div>
+    <strong> Today's Date: </strong> {{todaysDate | date}}
+</div>
+<br><br/>
+<div>
+    <strong>  Today's Date: </strong> {{todaysDate | date : 'mm/dd/yyyy'}}
+</div>
+<br><br/>
+<div>
+    <strong> Short Date: </strong> {{todaysDate | date : 'shortDate'}}
+</div>
+<br><br/>
+<div>
+    <strong> Full Date: </strong> {{todaysDate | date : 'fullDate'}}
+</div>
+<br><br/>
+<div>
+    <strong> (UpperCase) ChainPipe Date: </strong> {{todaysDate | date : 'fullDate' | uppercase}}
+</div>
+<br><br/>
+<div>
+    <strong> (LowerCase)  ChainPipe Date: </strong> {{todaysDate | date : 'fullDate' | lowercase}}
+</div>
+<br><br/>
+<!-- async pipe internally  -->
+<div>
+    <strong> (inbuilt create) inbuilt pipe: </strong> {{obser | async }}
+</div>
+<br><br/>
+<div>
+    <strong>: </strong> {{price}}
+</div>
+<br><br/>
+<div>
+    <!-- custom pipe -->
+    <strong>: </strong> {{price | count}} 
+</div>
+<div>
+    <strong>: </strong> {{obj | json}}
+</div>
+

@@ -23,6 +23,19 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveformAssignComponent } from './reactiveform-assign/reactiveform-assign.component';
 import { Service1Component } from './service1/service1.component';
 import { Service2Component } from './service2/service2.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { PipesdemoComponent } from './pipesdemo/pipesdemo.component';
+import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
+import { FilterPipe } from './filter.pipe';
+import { CountPipe } from './count.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -49,6 +62,19 @@ import { Service2Component } from './service2/service2.component';
     ReactiveformAssignComponent,
     Service1Component,
     Service2Component,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    PipesdemoComponent,
+    FilterPipeComponent,
+    FilterPipe,
+    CountPipe,
+    AboutusComponent,
+    ContactusComponent,
+    ProductComponent,
+    HomeComponent,
+    LoginComponent,
    
     
   ],
