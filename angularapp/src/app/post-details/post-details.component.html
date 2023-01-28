@@ -1,0 +1,102 @@
+<p>{{id}}</p>
+<!-- <div *ngFor="let p of arrPost">
+<h1>The user infomation with User Id:{{p.userId}} and ID:{{p.id}}</h1>
+    <strong>User Id:{{p.userId}}</strong><br>
+    <strong> Id:{{p.id}}</strong><br>
+    <strong>Title:{{p.title}}</strong><br>
+    <strong>Body:{{p.body}}</strong><br>
+</div>
+<hr>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-left rounded shadow py-5">
+<table>
+    <thead class="table">
+        <tr>
+            <th>User Id</th>
+            <th> Id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr  *ngFor="let p of arrPost">
+        <td>
+    <strong>{{p.userId}}</strong>
+        </td>
+        <td>
+    <strong> {{p.id}}</strong>
+        </td>
+        <td>
+    <strong>{{p.title}}</strong>
+        </td>
+        <td>
+    <strong>{{p.body}}</strong>
+        </td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div> -->
+<hr>
+<h4>Please click on the below button open popup</h4>
+<hr />
+<button style="margin: 50px; padding: 10px" type="button" class="btn btn-primary" (click)="openPopup()">Show Data</button>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><mark [ngStyle]="{'background-color': 'pink'}">POPUP</mark></h4>
+            </div>
+            <div class="modal-body">
+                <p><strong><mark>User Details:-</mark></strong> </p>
+                <div *ngFor="let p of arrPost">
+                   <h6><strong>The user infomation with User Id: {{p.userId}} and ID: {{p.id}}</strong></h6>
+                   <hr/>
+                </div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 text-left rounded shadow">
+                            <table class="table">
+                                <thead class="table">
+                                    <tr>
+                                        <th scope="row">UserId</th>
+                                        <th scope="row">Id</th>
+                                        <th scope="row">Title</th>
+                                        <th scope="row">Body</th>
+                                    </tr>
+                                  
+                                </thead>
+                               
+                                <tbody>
+                                    <tr *ngFor="let p of arrPost">
+                                        <td>
+                                            <strong>{{p.userId}}</strong>
+
+                                        </td>
+                                        <td>
+                                            <strong> {{p.id}}</strong>
+
+                                        </td>
+                                        <td>
+                                            <strong>{{p.title}}</strong>
+
+                                        </td>
+                                        <td>
+                                            <strong>{{p.body}}</strong>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

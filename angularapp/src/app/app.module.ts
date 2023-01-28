@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AttriComponent } from './attri/attri.component';
-import { CustdirDirective } from './custdir.directive';
+// import { CustdirDirective } from './custdir.directive';
 import { DemoComponent } from './demo/demo.component';
 import {HttpClientModule} from '@angular/common/http';
 import { OutputAssignmentComponent } from './output-assignment/output-assignment.component';
@@ -33,9 +33,15 @@ import { FilterPipe } from './filter.pipe';
 import { CountPipe } from './count.pipe';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { ProductComponent } from './product/product.component';
+// import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { DefaultComponent } from './default/default.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
+import { AddusserComponent } from './addusser/addusser.component';
+// import { ProductsModule } from './product/products.module';
+// import { OrdersModule } from './orders/orders.module';
 
 
 
@@ -51,7 +57,7 @@ import { LoginComponent } from './login/login.component';
     DemodirectivesComponent,
     NgswitchComponent,
     AttriComponent,
-    CustdirDirective,
+    // CustdirDirective,
     DemoComponent,
     OutputAssignmentComponent,
     HooksComponent,
@@ -72,9 +78,13 @@ import { LoginComponent } from './login/login.component';
     CountPipe,
     AboutusComponent,
     ContactusComponent,
-    ProductComponent,
+    // ProductComponent,
     HomeComponent,
     LoginComponent,
+    DefaultComponent,
+    DemopostComponent,
+    PostDetailsComponent,
+    AddusserComponent,
    
     
   ],
@@ -82,10 +92,13 @@ import { LoginComponent } from './login/login.component';
   
   imports: [
     BrowserModule,
+    // ProductsModule, //it is remove because lazy loading
+    // OrdersModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+
   
   ],
   providers: [],

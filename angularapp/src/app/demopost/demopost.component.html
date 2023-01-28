@@ -1,0 +1,25 @@
+<!-- <p>demopost works!</p> -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div>
+            <table class="table text-hover table-dark">
+                <thead>
+                    <tr>
+                        <th>userId</th>
+                        <th>id</th>
+                        <th>Title</th>
+                        <th>Body</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of arrPost">
+                        <td>{{post.userId}}</td>
+                        <td> <a [routerLink]="['/post-details', post.id]">{{post.id}}</a></td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.body}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
