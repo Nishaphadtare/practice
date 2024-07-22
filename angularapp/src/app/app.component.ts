@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Products } from './models/product';
 import { DemoService } from './services/demo.service';
+import { PostService } from './services/post.service';
 // import { Product } from './models/product';
 
 @Component({
@@ -17,7 +18,7 @@ export class AppComponent implements OnInit {
   product: Products = new Products();
   public  uid : number;
  
-constructor(private _demoService: DemoService){
+constructor(private _demoService: DemoService, private _postService: PostService){
  
 }
 distroy(){
@@ -37,7 +38,10 @@ ngOnInit(): void {
 console.log('posts', res);
 
  })
+ 
 }
+
+
 
 uname = 'I am from app component';
 employeeRecords: any = [
@@ -70,5 +74,12 @@ updateProduct(){
   this.product = new Products;
   this.product.name = this.name;
   this.product.price = this.price;
+}
+DeletePost() 
+{
+  this._postService.deletePostById(1).subscribe(res => {
+console.log(res);
+
+  })
 }
 }

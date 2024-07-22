@@ -6,7 +6,7 @@
                 <div formGroupName="userDetails">
             <div class="form-group">
                 <label for="username">UserName</label>
-                <input type="text" formControlName="username" class="form-control" id="" placeholder="Enter UserName">
+                <input type="text" formControlName="username" class="form-control" id="username" placeholder="Enter UserName">
                 <small class="text-danger" *ngIf="!myReactiveForm.get('userDetails.username').valid && myReactiveForm.get('userDetails.username').touched">
                     <small *ngIf="myReactiveForm.get('userDetails.username').errors['required']">please enter UserName</small>
                     <small *ngIf="myReactiveForm.get('userDetails.username').errors['notAllowedNames']">Codemind is not allowed {{myReactiveForm.get('userDetails.username').value}} </small>

@@ -40,6 +40,11 @@ import { DefaultComponent } from './default/default.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { AddusserComponent } from './addusser/addusser.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
+import { PracticerapidapiComponent } from './practicerapidapi/practicerapidapi.component';
+import { PracticefirebaseComponent } from './practicefirebase/practicefirebase.component';
+import { AssignmentComponent } from './assignment/assignment.component';
+import { Assignment2Component } from './assignment2/assignment2.component';
 // import { ProductsModule } from './product/products.module';
 // import { OrdersModule } from './orders/orders.module';
 
@@ -85,6 +90,11 @@ import { AddusserComponent } from './addusser/addusser.component';
     DemopostComponent,
     PostDetailsComponent,
     AddusserComponent,
+    RapidapiComponent,
+    PracticerapidapiComponent,
+    PracticefirebaseComponent,
+    AssignmentComponent,
+    Assignment2Component,
    
     
   ],

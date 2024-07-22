@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "angularapp",
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"courseDuration",
+			"devkit",
+			"jasminewd",
+			"Studentform"
+		],
+		"cSpell.ignoreWords": [
+			"codemind"
+		]
+	}
+}

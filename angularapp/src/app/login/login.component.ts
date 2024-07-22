@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  checkuser(uname, password) {
+  checkUser(uname, password) {
 
     //   if(uname == 'admin' &&  password == 'admin')
     //   {

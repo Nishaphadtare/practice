@@ -1,0 +1,17 @@
+.container{
+    margin-top: 40px;
+}
+h3{
+    color: rgba(1, 1, 66, 0.846);
+}
+h2{
+    margin-top: 30px;
+}
+.item{
+    background-image: radial-gradient(#b2f4d2 3px, transparent 3px);
+    background-size: 50px 50px;
+}
+p{
+    background-color: white;
+    color: black;
+}

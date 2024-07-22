@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { FireBasePost } from '../models/firebasepost';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-reactive-form',
@@ -10,12 +12,13 @@ import { Observable } from 'rxjs';
 export class ReactiveFormComponent implements OnInit {
 myReactiveForm: FormGroup;
 notAllowedNames = ['Codemind', 'Technology'];
-submitted : boolean =false;
+submitted : boolean = false;
 genders = [
   {id: '1', value:'Female'},
   {id: '2', value:'Male'}
 ]
-  constructor(private _fb: FormBuilder) {
+firebasePost: FireBasePost;
+  constructor(private _fb: FormBuilder, private _firebaseService: FirebaseService) {
     this.createForm();
    }
 
@@ -44,6 +47,11 @@ setTimeout(()=> {
 
 
   createForm(){
+
+    this._firebaseService.getPostDataFirebase().subscribe(res => {
+      console.log('get data From Firebase', res);
+      
+    })
     // this.myReactiveForm = new FormGroup({
     //   'userDetails' : new FormGroup({
     //     'username' : new FormControl('', [Validators.required, this.NaNames.bind(this)]),
@@ -69,6 +77,21 @@ setTimeout(()=> {
   OnSubmit(){
     this.submitted = true;
     console.log(this.myReactiveForm);
+    console.log(this.myReactiveForm['controls'].userDetails['controls'].username.value);
+    
+    this.firebasePost = new FireBasePost();
+    this.firebasePost.username = this.myReactiveForm['controls'].userDetails['controls'].username.value;
+    this.firebasePost.email = this.myReactiveForm['controls'].userDetails['controls'].email.value;
+    this.firebasePost.course = this.myReactiveForm['controls'].course.value;
+    this.firebasePost.gender = this.myReactiveForm['controls'].gender.value;
+    this.firebasePost.skills = this.myReactiveForm['controls'].skills.value;
+
+    // console.log('firebase class', this.firebasePost);
+    
+   this._firebaseService.createPostDataReactive(this.firebasePost).subscribe(res => {
+    console.log('firebase with reactive form', res);
+    
+   })
   }
   OnAddSkills(){
    (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl(null,Validators.required));
